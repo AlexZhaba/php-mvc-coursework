@@ -2,11 +2,11 @@
   class ControllerMain extends BaseController {
     public function __construct() {
       $this->view = new View("template_view.php");
-      $this->model = new FriendList();
+      $this->model = new Channels();
     }
 
     public function trigger() {
-      $this->view->generate("main_view.php", $this->model->get_data());
+      $this->view->generate("channels_view.php", $this->model->get_data());
     }
   }
 ?>
